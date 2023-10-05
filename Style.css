@@ -1,0 +1,95 @@
+body {
+  background-color: rgb(26, 25, 25);
+}
+.container {
+  margin-top: 20vh;
+  margin-left: 40vw;
+  
+}
+
+.s11 {
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  cursor: pointer;
+}
+.s12 {
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  margin-left: 81px;
+  cursor: pointer;
+}
+.s13 {
+
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  margin-left: 162px;
+  cursor: pointer;
+
+}
+.s21 {
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  margin-top: 81px;
+  cursor: pointer;
+}
+.s22 {
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  margin-top: 81px;
+  margin-left: 81px;
+  cursor: pointer;
+}
+.s23 {
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  margin-top: 81px;
+  margin-left: 162px;
+  cursor: pointer;
+}
+.s31 {
+  color: white;
+  height:80px;
+  width: 80px;
+  margin-top: 162px;
+  position: absolute;
+  cursor: pointer;
+  
+}
+.s32 {
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  margin-left: 81px;
+  margin-top: 162px;
+  cursor: pointer;
+}
+.s33 {
+  color: white;
+  height:80px;
+  width: 80px;
+  position: absolute;
+  margin-left: 162px;
+  margin-top: 162px;
+  cursor: pointer;
+}
+.cell {
+  background-color: rgb(27, 29, 31);
+  border: 2px solid rgb(160, 152, 2);
+}
+.cell :hover {
+  background-color: rgb(193, 196, 28);
+  
+}
