@@ -1,57 +1,57 @@
-let count=0;
+let count = 0;
 //Points
-let R=[0,0,0]; //row-wise
-let C=[0,0,0]; //column-wise
-let D=[0,0]; //diagnol-wise
+let R = [0, 0, 0]; //row-wise
+let C = [0, 0, 0]; //column-wise
+let D = [0, 0]; //diagnol-wise
 
-function color(index,cell) {  
-  if(count++%2) {
-    cell.style.backgroundColor="black";
-    points(index,1);
+function color(index, cell) {
+  if (count++ % 2) {
+    cell.style.backgroundColor = "black";
+    points(index, 1);
   } else {
-    cell.style.backgroundColor="white";
-    points(index,-1);
-  } 
-    checkWin()
-    cell.removeAttribute("onClick");
+    cell.style.backgroundColor = "white";
+    points(index, -1);
+  }
+  checkWin()
+  cell.removeAttribute("onClick");
 }
 
 //checks for the winning case
 function checkWin() {
-  for(let i=0;i<3;i++) {
-    if(R[i]===3||C[i]===3) {
-      console.log("Black Wins");
+  for (let i = 0; i < 3; i++) {
+    if (R[i] === 3 || C[i] === 3) {
+      message("Black Wins");
       stop();
     }
-    else if(R[i]===-3||C[i]===-3) {
-      console.log("White Wins");  
+    else if (R[i] === -3 || C[i] === -3) {
+      message("White Wins");
       stop();
     }
   }
-  if(D[0]===3 || D[1]===3) {
-    console.log("Black Wins");
+  if (D[0] === 3 || D[1] === 3) {
+    message("Black Wins");
     stop();
   }
-  else if(D[0]===-3 || D[1]===-3) {
-    console.log("White Wins");
+  else if (D[0] === -3 || D[1] === -3) {
+    message("White Wins");
     stop();
   }
-  else if(count===9) {
-    console.log("Draw");
+  else if (count === 9) {
+    message("Draw");
     stop();
   }
 }
 
 //awards points for each move
-function points(index,point) {
-  let i=index[0]
-  let j=index[1];
-  R[i-1]+=point,C[j-1]+=point;
-  if(i+j===4)
-    D[0]+=point;
-  if(i===j)
-    D[1]+=point;
- }
+function points(index, point) {
+  let i = index[0]
+  let j = index[1];
+  R[i - 1] += point, C[j - 1] += point;
+  if (i + j === 4)
+    D[0] += point;
+  if (i === j)
+    D[1] += point;
+}
 
 //reset
 function reset() {
@@ -59,9 +59,19 @@ function reset() {
 }
 //stop after result
 function stop() {
-  let cells=document.querySelectorAll('.cell');
+  let cells = document.querySelectorAll('.cell');
   cells.forEach(cell => {
-    cell.removeAttribute('onclick')    
+    cell.removeAttribute('onclick')
   });
 }
+
+function message(mes) {
+  let result = document.createElement("h1");
+  let result_cont = document.getElementById("Result");
+  result.innerText = mes;
+  result.style.color = "white";
+  result_cont.appendChild(result);
+
+}
+
 //autoplay feature in progress
